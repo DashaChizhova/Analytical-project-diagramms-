@@ -1,0 +1,92 @@
+body{
+    font-family: "Montserrat Alternates", sans-serif;
+    height: 100%;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+/* ------------------------------------------------------------------------------- */
+.under_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 110px;
+    margin-left: 110px;
+    margin-top: 30px;
+}
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color:#F86501;
+}
+.div_date, .div_company {
+    font-size: 14px;
+    line-height: 21px;
+    color:#494646;
+}
+.div_date{
+    font-weight: 600;
+}
+.div_company{
+    font-weight: 400;
+    margin-left: 60px;
+}
+.div_date input[type="date"], .div_company select {
+    border: 2px solid #D9D9D9;
+    border-radius: 12px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+.div_date input[type="date"]{
+    width: 170px;
+}
+.div_company select{
+    width: 581px;
+}
+.shesterenka_img{
+    width: 40px;
+    height: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* ------------------------------------------------------------------------------- */
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.diagramma_div{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.diagramma_title{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    color:#494646;
+}
+.diagramma_itog{
+    width: 100%;
+    text-align: center;
+    background-color: #30AD43;
+    padding: 10px;
+    border-radius: 5px;
+
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color:#FFFFFF;
+}
