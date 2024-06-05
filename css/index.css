@@ -249,7 +249,6 @@ cursor: pointer;
 
 /* ------------------------------nastroiki.HTML------------------------------------------------- */
 .nastroiki_content{
-  width: 650px;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -265,4 +264,10 @@ cursor: pointer;
 }
 .text_inputs{
   margin-right: 20px;
+}
+.score{
+  font-family: Montserrat Alternates;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
 }
