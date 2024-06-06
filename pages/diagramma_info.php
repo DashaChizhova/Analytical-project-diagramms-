@@ -1,3 +1,6 @@
+<?php
+ include('../include/db_action.php'); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
