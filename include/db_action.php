@@ -23,7 +23,6 @@ $opt_p = [
 
 try {
   $conn = new PDO('mysql:host=' . "localhost" . ';dbname=' . "project" . ';charset=utf8mb4', "root", "", $opt_p); //utf8mb4
-
 } catch (PDOException $e) {
   log_to_file_db('Подключение не удалось: ' . $e->getMessage());
   die('Подключение не удалось: ' . $e->getMessage());

@@ -13,11 +13,21 @@ a {
     color: black;
 }
 .container{
+  margin-bottom: 5%;
 }
 input{
     border: 2px solid #D9D9D9;
     border-radius: 12px;
-    padding: 11px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+
 }
 .row{
     display: flex;
@@ -26,6 +36,16 @@ input{
     display: flex;
     flex-direction: column;
   }
+  .div_date input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field, 
+input[type="date"]:in-range::-webkit-datetime-edit-text
+{
+  color: transparent;
+}
 /* ------------------------------------------------------------------------------- */
 .under_header{
     display: flex;
@@ -45,6 +65,11 @@ input{
   display: flex;
   align-items: center;
   margin-right: 35px;
+  padding-left: 3px;
+  
+}
+.nazad_img{
+  margin-right: 10px;
 }
 .title{
     font-weight: 700;
@@ -70,7 +95,7 @@ input{
 .div_company select {
     border: 2px solid #D9D9D9;
     border-radius: 12px;
-    padding: 11px;
+    padding: 12px;
 } 
 .div_date input[type="date"]{
     width: 170px;
@@ -90,21 +115,22 @@ input{
 }
 /* ------------------------------------------------------------------------------- */
 .main{
-    height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto; 
-    grid-column-gap:130px;
+    /* grid-column-gap:130px; */
     margin: auto;
     justify-content: center;
+    column-gap: 11%;
+    row-gap: 10%;
 }
 .diagramma_link{
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
 .diagramma_div{
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,10 +144,10 @@ input{
     color:#494646;
 }
 .diagramma_itog{
-    width: 80%;
+    width: 68%;
     text-align: center;
     background-color: #30AD43;
-    padding: 10px;
+    padding: 12px 10px;
     border-radius: 5px;
 
     font-family: "Roboto Mono", sans-serif;
@@ -129,6 +155,61 @@ input{
     font-size: 24px;
     line-height: 36px;
     color:#FFFFFF;
+}
+.diagramma_img{
+  width: 85%;
+}
+.strelka_img{
+  position:absolute;
+  top: 77%;
+  left: 29%;
+  width: 25%;
+  animation: nev 60s infinite steps(60);
+  transform-origin: 0 45px;
+
+}
+.diagramma .center{
+  width: 50px;
+  height: 50px;
+  position:absolute;
+  background-color: #323232;
+  border-radius: 100%;
+  border: 6px solid #fff;
+  top: 85%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.diagramma .center:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 21px  ;
+  bottom: 23px;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  background-color: transparent;
+  border-width: 0 5px 110px 5px;
+  border-color: transparent transparent  #323232 transparent;
+  border-radius: 0px 0px 10px 10px ;
+  border-style: solid;
+  transform-origin: center 107px;
+  /* animation: roll 3s alternate infinite */
+}
+  /* @keyframes roll{
+    from {
+      transform: rotate(-90deg)   } 
+    to {
+      transform:rotate(90deg) } 
+} */
+.diagramma{
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+  
 }
 /* ------------------------------DIAGRAMMA_INFO.HTML------------------------------------------------- */
 .diagramma_main {
@@ -140,6 +221,7 @@ input{
   .info_block {
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
   }
   
   .diagramma_block, .pokazateli_block {
@@ -148,13 +230,60 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    
+  }
+  .diagramma_block{
+    align-items: center;
   }
   .pokazateli_block{
     overflow-y: auto;
   }
   .grafik_block{
     width: 100%;
-    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-around;
+  }
+  
+  .grafik_title{
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: center;
+    color: #494646;
+  }
+ 
+  .grafik_ul li{
+    font-family: "Roboto", sans-serif;
+font-size: 20px;
+font-weight: 300;
+line-height: 23.44px;
+text-align: center;
+color: #494646;
+
+padding-top: 10px;
+padding-bottom: 10px;
+    list-style: none;
+    float: left;
+    width: 130px;
+    border: 1px solid #D9D9D9;
+    cursor: pointer;
+    color: #494646;
+  }
+  .grafik_ul li:first-child{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .grafik_ul li:last-child{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .grafik_ul li:hover{
+background-color: #F86501;
+color: #fff;
   }
   .stick{
     height: 500px;
@@ -170,7 +299,7 @@ input{
   }
   .search_btn{
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 8px 60px;
+    padding: 10px 60px;
     background-color: #001E44;
     border-radius: 5px;
     color: #FFFFFF;
@@ -179,6 +308,7 @@ input{
     font-weight: 600;
     line-height: 21px;
     text-align: center;
+    margin-left: 50px;
 
   }
   .tire{
@@ -221,10 +351,13 @@ input{
     line-height: 30px;
 
   }
+  .pokazatel_btn{
+    margin-top: 20px;
+  }
   .number{
     width: 80px;
     text-align: center;
-    margin-bottom: 4px;
+    margin-top: 18px;
   }
   .pokazatel_date input[type="date"]{
     width: 170px;
@@ -232,6 +365,8 @@ input{
   .pokazatel input[type="text"]{
     width: 450px;
 }
+
+
 /* ------------------------------DIAGRAMMA_INFO.HTML------------------------------------------------- */
 .vkladka_btn{
   width: 200px;
@@ -249,6 +384,9 @@ align-items: center;
 justify-content: center;
 margin-right: 15px;
 cursor: pointer;
+}
+.vkladka_btn:hover{
+  background-color: #F86501;
 }
 .vkladki{
   display: flex;
