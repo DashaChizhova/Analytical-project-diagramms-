@@ -1,0 +1,242 @@
+2024-06-10 21:26:12 ERROR > Подключение не удалось: SQLSTATE[28000] [1045] Access denied for user 'admin'@'localhost' (using password: YES) ; 
+2024-06-12 20:10:23 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-15 19:28:56 ERROR > insertTable > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?' at line 1 > `pokazateli`|`pokazatel`,`current__date`, `diagramma_id`|`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?|3424,2024-06-08,1| ; 
+2024-06-15 19:41:06 ERROR > insertTable > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?' at line 1 > `pokazateli`|`pokazatel`,`current__date`, `diagramma_id`|`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?|432342,2024-06-05,1| ; 
+2024-06-15 19:43:33 ERROR > insertTable > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?' at line 1 > `pokazateli`|`pokazatel`,`current__date`, `diagramma_id`|`pokazatel`=?, `current__date`=?, ,`diagramma_id`=?|65656443,2024-06-12,1| ; 
+2024-06-18 19:17:23 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-18 19:17:24 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-19 20:58:06 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`no...' at line 1 > `diagrams_nastroiki`|`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	`current__date`|(?,?,?,?,?,?,?,?,?,?,?,?,?)|2,234,234,243,423,423,243,423,432,423,234,423,0 ; 
+2024-06-19 21:08:11 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	`current__date`|(?,?,?,?,?,?,?,?,?,?,?,?,?,?)|undefined,777,,,,,,,,,,,,0 ; 
+2024-06-19 21:33:50 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?,?)|undefined,5234,5234,5243,5342,5342,5342,5234,5234,3524,5243,5234,5342 ; 
+2024-06-19 21:36:31 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?,?)|1,3214,1342,1534,5134,5143,1534,5134,1354,1345,1345,5134,5134 ; 
+2024-06-19 21:39:57 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?,?)|1,3214,1342,1534,5134,5143,1534,5134,1354,1345,1345,5134,5134 ; 
+2024-06-19 21:45:27 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?,?)|1,2453,4231,4231,4312,4132,4123,4132,4132,4132,1432,3412,1342 ; 
+2024-06-19 21:48:58 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,...' at line 1 > `diagrams_nastroiki`|`diagramma_id`,
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?,?)|1,3452,534,5234,2534,5234,2534,2354,2345,2435,2345,2435,2345 ; 
+2024-06-19 21:50:53 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`no...' at line 2 > `diagrams_nastroiki`|
+	`excelent_from`,`excelent_to`, 
+	`good_from`,`good_to`, 
+	`better_from`,`better_to`, 
+	`notgood_from`,`notgood_to`, 
+	`bad_from`,`bad_to`, 
+	`ahtung_from`,`ahtung_to`, 
+	|(?,?,?,?,?,?,?,?,?,?,?,?)|32e,1423,3142,1342,1432,1432,143,1432,1423,1342,1342,1423 ; 
+2024-06-19 21:56:42 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE Array' at line 8 > `diagrams_nastroiki`|
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?, 
+	|Array| ; 
+2024-06-19 21:58:04 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =? 
+	|Array| ; 
+2024-06-19 21:59:19 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:11:52 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-20 18:12:00 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-20 18:13:58 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:14:28 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:14:37 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:18:41 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:27:28 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?,
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:28:22 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?,
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:46:15 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?, `excelent_from`=?|Array| ; 
+2024-06-20 18:47:28 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?,
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:47:50 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?,
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:48:16 ERROR > updateColumn > SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' > `diagrams_nastroiki`|`diagramma_id` =?,
+	`excelent_from`=?,`excelent_to` =?, 
+	`good_from` =?,`good_to` =?, 
+	`better_from` =?,`better_to` =?, 
+	`notgood_from` =?,`notgood_to` =?, 
+	`bad_from` =?,`bad_to` =?, 
+	`ahtung_from` =?,`ahtung_to` =?|Array| ; 
+2024-06-20 18:48:59 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-20 18:56:21 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-20 19:42:03 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '` =? WHERE `diagramma_id` =?' at line 7 > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+    	`good_from` =?,`good_to` =?, 
+    	`better_from` =?,`better_to` =?, 
+    	`notgood_from` =?,`notgood_to` =?, 
+    	`bad_from` =?,`bad_to` =?, 
+    	`ahtung_from` =?,`ahtung_to` =?,
+		current__date` =?|`diagramma_id` =?|0,1,1,5,5,20,20,50,50,75,75,100,1,2024-06-20 ; 
+2024-06-20 19:42:12 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '` =? WHERE `diagramma_id` =?' at line 7 > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+    	`good_from` =?,`good_to` =?, 
+    	`better_from` =?,`better_to` =?, 
+    	`notgood_from` =?,`notgood_to` =?, 
+    	`bad_from` =?,`bad_to` =?, 
+    	`ahtung_from` =?,`ahtung_to` =?,
+		current__date` =?|`diagramma_id` =?|1,222220,0,0,0,0,0,0,0,0,0,0,2,2024-06-20 ; 
+2024-06-20 19:42:47 ERROR > updateColumn > SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '` =? WHERE `diagramma_id` =?' at line 7 > `diagrams_nastroiki`|`excelent_from`=?,`excelent_to` =?, 
+    	`good_from` =?,`good_to` =?, 
+    	`better_from` =?,`better_to` =?, 
+    	`notgood_from` =?,`notgood_to` =?, 
+    	`bad_from` =?,`bad_to` =?, 
+    	`ahtung_from` =?,`ahtung_to` =?,
+		current__date` =?|`diagramma_id` =?|1,222220,0,0,0,0,0,0,0,0,0,0,2024-06-20,2 ; 
+2024-06-20 20:17:51 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-21 19:19:49 ERROR > insertTable > SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 > `pokazateli`|`pokazatel`,`current__date`, `diagramma_id`, `company_id`|(?,?,?)|23421,2024-06-13,1,222| ; 
+2024-06-21 20:52:09 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-24 21:05:47 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-25 18:49:41 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-25 21:08:19 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-25 21:09:51 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-25 21:09:51 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-06-27 19:59:41 ERROR > insertTable > SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'current__date' cannot be null > `pokazateli`|`pokazatel`,`current__date`, `diagramma_id`, `company_id`|(?,?,?,?)|123,,1,111| ; 
+2024-07-01 20:12:45 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-01 20:12:47 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-01 20:13:30 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-03 18:53:04 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-03 19:39:28 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-03 20:55:50 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-06 15:25:59 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-06 15:25:59 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 20:55:04 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 20:56:06 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 21:03:32 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 21:31:00 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 21:31:02 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-07 22:13:16 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-09 23:46:38 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-11 22:31:34 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-11 23:06:29 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-11 23:06:31 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-14 11:19:33 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-15 15:04:16 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-15 15:04:16 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-15 15:04:19 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-15 19:06:32 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-15 19:22:33 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-16 14:58:01 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-16 16:17:02 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-17 21:39:38 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-18 10:05:09 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-18 18:40:57 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-21 17:57:52 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-21 17:57:55 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 

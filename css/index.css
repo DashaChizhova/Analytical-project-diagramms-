@@ -1,16 +1,30 @@
+.nav{
+  margin-bottom: 60px;
+  margin-top: 10px;
+}
+.container_full{
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 /* ------------------------------VSE_DIAGRAMMI.HTML------------------------------------------------- */
+*{
+	margin:0;
+	padding:0;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+}
 body{
     font-family: "Montserrat Alternates", sans-serif;
     height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 a {
     text-decoration: none;
-    color: black;
+    cursor: pointer;
+    color: #000000;
+    ;
 }
 .container{
   margin-bottom: 5%;
@@ -18,7 +32,7 @@ a {
 input{
     border: 2px solid #D9D9D9;
     border-radius: 12px;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     text-align: center;
 
@@ -27,8 +41,19 @@ input{
     font-weight: 700;
     line-height: 21px;
     text-align: center;
-
 }
+select {
+  border: 2px solid #D9D9D9;
+  border-radius: 12px;
+  padding: 10px;
+
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 14px;
+  /* font-weight: 700; */
+  line-height: 21px;
+  text-align: center;
+ 
+} 
 .row{
     display: flex;
   }
@@ -51,8 +76,12 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 110px;
-    margin-top: 30px;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    
+}
+.title_block{
+  display:flex; flex-direction: row; align-items: center;
 }
 .nazad_btn{
   border: 1px solid black;
@@ -64,72 +93,80 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
   line-height: 21px;
   display: flex;
   align-items: center;
-  margin-right: 35px;
   padding-left: 3px;
-  
+margin-right: 20px;  
 }
 .nazad_img{
   margin-right: 10px;
 }
 .title{
     font-weight: 700;
-    font-size: 24px;
     line-height: 36px;
     color:#F86501;
+    font-size: 22px;
+}
+.dates_block{
+  display: flex;
+  flex-direction:row;
 }
 .div_date, .div_company {
     font-size: 14px;
     line-height: 21px;
     color:#494646;
 }
+.div_date:first-child{
+  /* margin-right: 10px; */
+}
+.div_date:last-child{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.div_date_noleft:last-child{
+  margin-left: 0px;
+  
+}
 .div_date{
     font-weight: 600;
+    white-space: nowrap;
 }
 .probel{
-    width: 30px;
+    /* width: 30px; */
 }
 .div_company{
     font-weight: 400;
-    margin-left: 60px;
+    white-space: nowrap;
 }
-.div_company select {
-    border: 2px solid #D9D9D9;
-    border-radius: 12px;
-    padding: 12px;
-} 
+
 .div_date input[type="date"]{
-    width: 170px;
+    width: 140px;
 }
 .date_text{
     margin-right: 8px;
 }
 .div_company select{
-    width: 581px;
-    margin-left: 8px;
+    width: 260px;
+    /* margin-left: 8px; */
 }
 .shesterenka_img{
     width: 40px;
     height: 40px;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 /* ------------------------------------------------------------------------------- */
 .main{
-    display: grid;
-    grid-template-columns: auto auto auto; 
-    /* grid-column-gap:130px; */
+    display: flex;
+  flex-wrap: wrap;
     margin: auto;
     justify-content: center;
-    column-gap: 11%;
-    row-gap: 10%;
+   
 }
 .diagramma_link{
     display: block;
-    width: 450px;
+    width: 455px;
     height: 450px;
 }
 .diagramma_div{
-    width: 450px;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -157,7 +194,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
     color:#FFFFFF;
 }
 .diagramma_img{
-  width: 85%;
+  width: 87%;
 }
 .strelka_img{
   position:absolute;
@@ -191,12 +228,36 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
   height: 0px;
   margin: auto;
   background-color: transparent;
-  border-width: 0 5px 110px 5px;
+  border-width: 1px 7px 122px  4px;
   border-color: transparent transparent  #323232 transparent;
   border-radius: 0px 0px 10px 10px ;
   border-style: solid;
-  transform-origin: center 107px;
-  /* animation: roll 3s alternate infinite */
+  transform-origin: center 122px ;
+  /* animation: roll 0s alternate infinite; */
+  transform: rotate(-90deg); 
+  
+}
+ /* Другие стили для пустой диаграммы */
+.empty-diagram .center:before {
+  display: none;
+}
+.excelent{
+  transform: rotate(80deg) 
+}
+.good{
+  transform: rotate(50deg) 
+}
+.better{
+  transform: rotate(20deg) 
+}
+.notgood{
+  transform: rotate(-15deg) 
+}
+.bad{
+  transform: rotate(-50deg) 
+}
+.ahtung{
+  transform: rotate(-80deg) 
 }
   /* @keyframes roll{
     from {
@@ -210,6 +271,9 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
   position: relative;
   padding-top: 20px;
   
+}
+#myChart{
+  margin-bottom: 200px;
 }
 /* ------------------------------DIAGRAMMA_INFO.HTML------------------------------------------------- */
 .diagramma_main {
@@ -245,11 +309,12 @@ input[type="date"]:in-range::-webkit-datetime-edit-text
     flex-direction: row;
     align-items:center ;
     justify-content: space-around;
+    margin-bottom: 20px;
   }
   
   .grafik_title{
     font-family: "Roboto", sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 37.5px;
     text-align: center;
@@ -281,9 +346,13 @@ padding-bottom: 10px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
   }
-  .grafik_ul li:hover{
+  /* .grafik_ul li:hover{
 background-color: #F86501;
 color: #fff;
+  } */
+  .orange-background{
+    background-color: #F86501 !important;
+    color: #fff !important;
   }
   .stick{
     height: 500px;
@@ -299,7 +368,7 @@ color: #fff;
   }
   .search_btn{
     font-family: "Montserrat Alternates", sans-serif;
-    padding: 10px 60px;
+    padding: 10px 50px;
     background-color: #001E44;
     border-radius: 5px;
     color: #FFFFFF;
@@ -308,7 +377,7 @@ color: #fff;
     font-weight: 600;
     line-height: 21px;
     text-align: center;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 
   }
   .tire{
@@ -319,11 +388,11 @@ color: #fff;
     margin-right: 10px;
   }
   .tire_low{
-    margin-top: 10%;
+    margin-top: 15%;
   }
  
   .clear_btn{
-    margin-left: 30px;
+    margin-left: 20px;
     display: flex;
     align-items: end;
   }
@@ -346,7 +415,7 @@ color: #fff;
   }
   .pokazateli_title, .number{
     text-align: center;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 600;
     line-height: 30px;
 
@@ -360,10 +429,13 @@ color: #fff;
     margin-top: 18px;
   }
   .pokazatel_date input[type="date"]{
-    width: 170px;
+    width: 120px;
+}
+.pokazatel_date input[type="text"]{
+  width: 120px;
 }
   .pokazatel input[type="text"]{
-    width: 450px;
+    width: 200px;
 }
 
 
@@ -385,7 +457,10 @@ justify-content: center;
 margin-right: 15px;
 cursor: pointer;
 }
-.vkladka_btn:hover{
+
+
+
+.vkladka_btn:focus-within{
   background-color: #F86501;
 }
 .vkladki{
@@ -420,4 +495,51 @@ cursor: pointer;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
+}
+@media (max-width: 500px)  {
+  .shesterenka_img{
+    display: none;
+  }
+  .under_header{
+    justify-content: center;
+    
+  }
+  .dates_block {
+    order: 3; /* Порядок блока div_date */
+    
+}
+.div_company {
+    order: 2; /* Порядок блока div_company */
+    margin-bottom: 30px;
+   
+}
+.title{
+  margin-bottom: 30px;
+}
+.date_text{
+  display: block;
+}
+select{
+  padding: 14px;
+}
+.dates_block{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.div_company{
+  width: 300px;
+}
+.div_company select{
+  width: 100%;
+}
+.div_date:last-child {
+  margin: 0;
+}
+.div_date:last-child select{
+  width: 130px;
+}
+.diagramma_div{
+  border-bottom: 1px solid black;
+}
 }

@@ -1,11 +1,9 @@
 <?php
-// defined('s@>J$qw$i8_5rvY=6d{Z@!,V%J[J4Z^8C3q*bO$%/_db~iy6Fz=eTL/^O-@VKJU{E=U^x,JfooR19xKpgQ*,A/Dbg+9@>J1%.T[sL9#-4!-A8]t') or die('Доступ запрещён!');
-
-// require_once __DIR__ . '/config.php';
+defined('s@>J$qw$i8_5rvY=6d{Z@!,V%J[J4Z^8C3q*bO$%/_db~iy6Fz=eTL/^O-@VKJU{E=U^x,JfooR19xKpgQ*,A/Dbg+9@>J1%.T[sL9#-4!-A8]t') or die('Доступ запрещён!');
 
 function log_to_file_db($txt, $type = 'ERROR')
 {
-  $log_file_path = (!empty(APP_LOGS_PATH) ? APP_LOGS_PATH . 'db_error.log' : __DIR__  . '/../logs/db_error.log');
+  $log_file_path = __DIR__  . '/../logs/db_error.log';
   $f = fopen($log_file_path, 'a');
   fwrite($f, date('Y-m-d H:i:s') . ' ' . $type . ' > ' . $txt . ' ; ' . PHP_EOL);
   fclose($f);
@@ -22,7 +20,8 @@ $opt_p = [
 ];
 
 try {
-  $conn = new PDO('mysql:host=' . "localhost" . ';dbname=' . "project" . ';charset=utf8mb4', "root", "", $opt_p); //utf8mb4
+  $conn = new PDO('mysql:host=' . BD_HOST . ';dbname=' . BD_NAME . ';charset=utf8mb4', BD_USER, BD_PASS, $opt_p); //utf8mb4
+  // $conn = new PDO('mysql:host=' . "localhost" . ';dbname=' . "project" . ';charset=utf8mb4', "root", "", $opt_p); //utf8mb4
 } catch (PDOException $e) {
   log_to_file_db('Подключение не удалось: ' . $e->getMessage());
   die('Подключение не удалось: ' . $e->getMessage());
@@ -193,7 +192,7 @@ function updateColumn($table, $column, $condition = 1, $arr_param = [])
   global $conn;
 
   try {
-    $arr_param = del_js_code($arr_param);//trim js code
+    // $arr_param = del_js_code($arr_param);//trim js code
     $stmt = $conn->prepare("UPDATE $table SET $column WHERE $condition");
     $stmt->execute($arr_param);
     return $stmt;
@@ -240,7 +239,7 @@ function insertTable($table, $column, $values, $arr_param = [], $ignore = false)
   try {
     //mysqli_query($conn, "INSERT $ignore_bd INTO $table ($column) Values $values");
     //$id_ins = mysqli_insert_id($conn);
-    $arr_param = del_js_code($arr_param);//trim js code
+    // $arr_param = del_js_code($arr_param);//trim js code
 
     $stmt = $conn->prepare("INSERT $ignore_bd INTO $table ($column) VALUES $values");
     $stmt->execute($arr_param);
