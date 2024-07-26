@@ -27,16 +27,16 @@ if (isset($_POST['get_all_pok']) && $_POST['get_all_pok'] === '12345') {
 
 	$sql = selectColumnAll('pokazateli', 'pokazatel, diagramma_id', 'period=?  AND company_id=? GROUP BY diagramma_id', [$period,   $company_id]);
 	//$sql2 = selectColumnAll('diagrams_nastroiki', 'excelent_from, excelent_to, good_from, good_to, better_from, better_to, notgood_from, notgood_to, bad_from, bad_to, ahtung_from, ahtung_to', 'diagramma_id=?', [$diagramma_id]);
-	$myArray = getPokazateliMassive();
+	// $myArray = getPokazateliMassive();
 
-	foreach ($myArray as $item) {
-		if ($item['company_id'] == $company_id && $item['period'] == $period) {
-			$arr_data_2[] = $item;
+	// foreach ($myArray as $item) {
+	// 	if ($item['company_id'] == $company_id && $item['period'] == $period) {
+	// 		$arr_data_2[] = $item;
 		   
-		}
-	}
+	// 	}
+	// }
 
-	$sql = array_merge($sql, $arr_data_2);
+	// $sql = array_merge($sql, $arr_data_2);
 
     foreach($sql as $val){
         $arr_data_1[] = ['id_diagram'=>$val['diagramma_id'], 'summa_diagram'=>$val['pokazatel']];

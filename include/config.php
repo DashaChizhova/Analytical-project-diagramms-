@@ -31,7 +31,7 @@ define('BD_PASS','');
 define('BD_NAME','project');
 
 
-// define('ROOT_PATH','http://stillchick-39959.smrtp.ru/test/monitor/');
+// define('ROOT_PATH','http://otremontik.ru/test/monitor/');
 // define('BD_HOST','localhost');
 // define('BD_USER','dasha');
 // define('BD_PASS','iH2aP2vC6s');

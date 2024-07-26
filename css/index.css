@@ -302,6 +302,9 @@ margin-right: 20px;
   }
   .pokazateli_block{
     overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    justify-content: flex-start;
   }
   .grafik_block{
     width: 100%;
@@ -400,6 +403,7 @@ color: #fff;
     vertical-align: middle;
   }
   .scrollable_content{
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
   }
@@ -497,6 +501,9 @@ cursor: pointer;
   line-height: 30px;
 }
 @media (max-width: 500px)  {
+  .main{
+    margin-top: 50px;
+  }
   .shesterenka_img{
     display: none;
   }
@@ -541,5 +548,69 @@ select{
 }
 .diagramma_div{
   border-bottom: 1px solid black;
+}
+.diagramma .center:before {
+  bottom: 67px;
+  left: 62px;
+  border-width: 1px 3px 79px 4px;
+}
+.diagramma_itog{
+  font-size: 20px;
+  width: 70%;
+  padding: 8px 8px;
+}
+.diagramma_img {
+  width: 93%;
+}
+.diagramma {
+  width: 100%;
+}
+.info_block{
+  flex-direction: column;
+}
+.diagramma_block{
+  height: 450px;
+}
+.diagramma_block .nastroiki{
+  order: -1;
+}
+.diagramma_block .row{
+
+  width: 300px;
+        display: flex;
+        justify-content: space-between;
+  
+}
+.stick, .grafik_block, .myChart{
+  display: none !important;
+}
+.diagramma_block, .pokazateli_block {
+  width: 115%;
+  /* margin-top: 50px; */
+}
+.pokazateli_block {
+  margin-top: 80px;
+  overflow-y: unset;
+}
+#pokazatel_date, #pok_date_input{
+  width: 100px;
+}
+#pokazatel, #pok_input{
+  width: 140px;
+}
+.number {
+  width: 30px;
+}
+.diagramma_info_dates_block{
+  display: none;
+}
+.nav{
+  margin-bottom:  0px;
+}
+.pokazateli_row:first-child {
+ margin-bottom: 30px;
+}
+.scrollable_content{
+  overflow-y: unset;
 }
 }

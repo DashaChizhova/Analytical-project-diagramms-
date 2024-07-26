@@ -5,18 +5,18 @@
 	echo 'Диаграма не найдена';
 }
 
-$pokazateli_array = selectColumnAll('pokazateli', '`id`, `pokazatel`, `period`, `diagramma_id`', '`diagramma_id`=? and `company_id`=? ORDER BY period DESC', [$get_param_1, 222]);
+//$pokazateli_array = selectColumnAll('pokazateli', '`id`, `pokazatel`, `period`, `diagramma_id`', '`diagramma_id`=? and `company_id`=? ORDER BY period DESC', [$get_param_1, 111]);
 
 $diagrams_array = selectColumnAll('diagrams_nastroiki', '*', '`diagramma_id`=?', [$get_param_1]);
-$myArray = getDiagrammNastroikiMassive();
-$arr_data2 = [];
-foreach ($myArray as $item) {
-    if ($item['diagramma_id'] == $get_param_1) {
-        $arr_data2[] = $item;
+// $myArray = getDiagrammNastroikiMassive();
+// $arr_data2 = [];
+// foreach ($myArray as $item) {
+//     if ($item['diagramma_id'] == $get_param_1) {
+//         $arr_data2[] = $item;
        
-    }
-}
-$diagrams_array = array_merge($diagrams_array, $arr_data2);
+//     }
+// }
+// $diagrams_array = array_merge($diagrams_array, $arr_data2);
 $nastroiki_array = [];
 foreach($diagrams_array as $val){
     $nastroiki_array[] = [
@@ -40,9 +40,9 @@ $startOfMonth = date('Y-m-01');
         <div class="under_header">
             <div class="title_block">  
                 <a href="<?=ROOT_PATH?>"><div class="nazad_btn"><div class="nazad_img"><img src="<?=ROOT_PATH?>img/Back.svg" class="clear_img" alt=""></div><div>Назад</div></div></a>
-                <div class="title"><?php echo  $diagrams_array[0]['diagramma_title']; ?></div>
+                <div class="title diagramma_info_title"><?php echo  $diagrams_array[0]['diagramma_title']; ?></div>
             </div>  
-            <div style="visibility: hidden;" class="dates_block">
+            <div style="visibility: hidden;" class="dates_block diagramma_info_dates_block">
                 <div class="div_date"><text class="date_text">Период C</text><input class="papam_filtr" type="date" name="start_date"  value="<?php echo $startOfMonth; ?>"></div> 
                 <div class="div_date"><text class="date_text">Период ПО</text><input class="papam_filtr"  type="date" name="end_date" value="<?php echo $currentDate; ?>"></div>  
             </div>
@@ -94,22 +94,22 @@ $startOfMonth = date('Y-m-01');
                             </select>
                         </div>  
                     </div>
-                    <div  class="row">
-                        <!-- <div ><input class="search_btn" class="search_btn" type="submit" value="Поиск"></div>  
-                        <div class="clear_btn"><a href="#">Очистить <img class="clear_img" src="<?=ROOT_PATH?>img/lastik.svg" alt=""></a></div>   -->
-                    </div>
+                   
                 </div>
             </div>
             <div class="stick"></div>
             <div class="pokazateli_block">
+            <div class="pokazateli_title">История показателей</div><br>
                 <div class="scrollable_content">
-                    <div class="pokazateli_title">История показателей</div><br>
+                   
+                   
                     <div class="pokazateli_row row">
                         <div class="number"></div>
                         <div class="pokazatel_date">Дата <br><input type="date" name="end_date" id="pok_date_input" ></div>  
                         <div class="pokazatel">Показатель<br><input type="text" id="pok_input"></div>
-                        <div class="pokazatel_btn"><a href="#" class="add-btn" data-iddiagram="<?= $pokazateli_array[0]['diagramma_id']?>" ><img src="<?=ROOT_PATH?>img/Plus Math.svg" alt=""></a></div>
+                        <div class="pokazatel_btn"><a href="#" class="add-btn" data-iddiagram="<?= $get_param_1?>" ><img src="<?=ROOT_PATH?>img/Plus Math.svg" alt=""></a></div>
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@ $startOfMonth = date('Y-m-01');
                 </ul>
             </div>
         </div>
-            <canvas id="myChart"></canvas>
+            <canvas class="myChart" id="myChart"></canvas>
         
     </div>
 </div>
@@ -161,7 +161,7 @@ options: {
 
 	// -------------------------при загрузке документа------------------------
 $(document).ready(function() {
-
+    var get_param_1 = "<?php echo $get_param_1; ?>";
     //подставить в селект текущую дату
     let currentDate = new Date();
     let currentMonth = currentDate.getMonth() + 1; 
@@ -182,6 +182,10 @@ $(document).ready(function() {
     });
 
     getPokazateliHistory()
+
+    if(get_param_1 == 4){
+        $(".pokazateli_row").css("display","none");
+    }
     
 });
 
@@ -295,8 +299,6 @@ $(document).on('click', '.delete-btn', function () {
    
     let month = parts[1];
     let year = parts[0];
-    
-
 
     var id_d = $(this).attr('data-iddiagram');
 
@@ -370,9 +372,13 @@ $(document).on('click', '.delete-btn', function () {
                 '<div class="pokazateli_row row" >' +
                         '<div class="number"> #' + item.row_number + '</div>' +
                         '<div class="pokazatel_date" >Дата<br><input type="text" id="pokazatel_date" name="end_date" value="' + item.period + '" readonly></div>' + 
-                        '<div class="pokazatel" >Показатель<br><input type="text" id="pokazatel" name="end_date" value="' + item.pokazatel.toLocaleString() + '" readonly></div>' +
-                        '<div class="pokazatel_btn"><a href="#" class="delete-btn" data-iddiagram="'+ item.id +'"><img src="<?=ROOT_PATH?>img/Remove.svg" alt=""></a></div>' +
-                    '</div>' 
+                        '<div class="pokazatel" >Показатель<br><input type="text" id="pokazatel" name="end_date" value="' + item.pokazatel.toLocaleString() + '" readonly></div>'; 
+                    if (get_param_1 != 4) {
+                    newBlock += 
+                        '<div class="pokazatel_btn"><a href="#" class="delete-btn" data-iddiagram="'+ item.id +'"><img src="<?=ROOT_PATH?>img/Remove.svg" alt=""></a></div>';
+                    }
+
+                    newBlock += '</div>'; // Закрываем основной div
                 pokazateliBlock.append(newBlock);
                 });
                 }
@@ -414,7 +420,7 @@ function getData(){
                 try{
                     arr_resp = JSON.parse(data);
                     if(arr_resp[0] === 'ok'){
-                        // arr_resp[1].foreach(data=>{
+                       
                        if(arr_resp[1][0] !== undefined){
                         let summaItog =  arr_resp[1][0].pokazatel;
                         let resultArray = getPokazateliDiagramm(summaItog);
@@ -422,79 +428,16 @@ function getData(){
                         $('.diagramma_itog').text(summaItog.toLocaleString() + ' ' + resultArray.get('izmerenie'));
                         $('<style>.diagramma .center:before {display: block}</style>').appendTo('head');
                         $('.center').css('transform', `rotate(${resultArray.get('itog_degree')}deg)`);  
-                        
                         $('.diagramma_img').attr('src', `<?=ROOT_PATH?>img/diagramma/diagramma_${resultArray.get('otsenka')}.svg`);
                         $('.diagramma_itog').css('background-color', `${resultArray.get('diagramma_itog_color')}`);
                        } else{
                        
                         $('.diagramma_itog').text('-');
                         $('<style>.diagramma .center:before {display: none}</style>').appendTo('head');
-                        // $('.center').css('transform', 'rotate(0deg)');  
                         $('.diagramma_img').attr('src', `<?=ROOT_PATH?>img/diagramma/diagramma_empty.svg`);
                         $('.diagramma_itog').css('background-color', '');
                        }
-                        
-                        function getPokazateliDiagramm(summaItog){
-                            var nastroiki_array = <?php echo json_encode($nastroiki_array); ?>;
-                            console.log(nastroiki_array);
-                            arr = nastroiki_array[0];
-                            let isInverseSettings = arr['excelent_from'] > arr['ahtung_from']; //находит инверсивные ли показатели в настройках (от меньшего к большему или наоборот)
-                            summaItog = checkPokazatel(summaItog, Math.min(arr['excelent_from'],arr['excelent_to']), Math.max(arr['ahtung_to'], arr['ahtung_from']), isInverseSettings);
-                            let scores = [
-                                { start: arr['excelent_from'], end: arr['excelent_to'], score: 150, score_text: "excelent", diagramma_itog_color: "#30AD43" },
-                                    { start: arr['good_from'], end: arr['good_to'], score: 120, score_text: "good", diagramma_itog_color: "#84BD32" },
-                                    { start: arr['better_from'], end: arr['better_to'], score: 90 , score_text: "better", diagramma_itog_color: "#D1D80F"},
-                                    { start: arr['notgood_from'], end: arr['notgood_to'], score: 60, score_text: "notgood", diagramma_itog_color: "#FEE114" },
-                                    { start: arr['bad_from'], end: arr['bad_to'], score: 30, score_text: "bad", diagramma_itog_color: "#FF8888" },
-                                    { start: arr['ahtung_from'], end: arr['ahtung_to'], score: 0, score_text: "ahtung", diagramma_itog_color: "#FF0000" }
-                            ];
-                                let result;
-                                let otsenka = "";
-                                let diagramma_itog_color = "";
-                                for (let i = 0; i < scores.length; i++) {
-                                    if (summaItog >= scores[i].start && summaItog <= scores[i].end || summaItog <= scores[i].start && summaItog >= scores[i].end) {
-                                        result = scores[i].score;
-                                        otsenka += scores[i].score_text; 
-                                        diagramma_itog_color += scores[i].diagramma_itog_color;
-                                        break;
-                                    }
-                                }
-                                const score = scores.find(item => item.score === result);
-                              
-                                var itog_degree = (30/(score.end/summaItog)) + result;
-                                var resultArray = new Map();
-                                resultArray.set('otsenka',otsenka);
-                                resultArray.set('itog_degree',itog_degree);
-                                resultArray.set('diagramma_itog_color',diagramma_itog_color);
-                                resultArray.set('izmerenie', arr['izmerenie']);
-                                console.log('summaitog: :' + String(summaItog))
-                                console.log('градусов:' + String(resultArray.get('itog_degree')));
-                                console.log('score.end:' + String(score.end));
-                                console.log(resultArray.get('otsenka'))
-                                
-                                return resultArray;
-                        }
-                        function checkPokazatel(num, num1, num2, isInverseSettings) {
-                               let lowerNum;
-                               let upperNum;
-                                if(isInverseSettings){
-                                    lowerNum = num2;
-                                    upperNum = num1;
-                               }else{
-                                    lowerNum = num1;
-                                    upperNum = num2;
-                               }
-                               if (num < lowerNum || num > upperNum) {
-                                    if (Math.abs(num - lowerNum) < Math.abs(num - upperNum)) {
-                                        return lowerNum;
-                                    } else {
-                                        return upperNum;
-                                    }
-                                } else {
-                                    return num;
-                                }
-                            }
-                    // });
+                    
                     }else{
                         alert(arr_resp[1]);
                     }
@@ -503,6 +446,83 @@ function getData(){
     });
 
 }
+var nastroiki_array = <?php echo json_encode($nastroiki_array); ?>;
+function getPokazateliDiagramm(summaItog){
+ 
+    arr = nastroiki_array[0];
+    let isInverseSettings = arr['excelent_from'] > arr['ahtung_from']? false : true; //находит инверсивные ли показатели в настройках (от меньшего к большему или наоборот)
+    //  summaItog = checkPokazatel(summaItog, Math.min(arr['excelent_from'],arr['excelent_to']), Math.max(arr['ahtung_to'], arr['ahtung_from']), isInverseSettings);
+    let scores = [
+        { start: arr['excelent_from'], end: arr['excelent_to'], score: 150, score_text: "excelent", diagramma_itog_color: "#30AD43" },
+            { start: arr['good_from'], end: arr['good_to'], score: 120, score_text: "good", diagramma_itog_color: "#84BD32" },
+            { start: arr['better_from'], end: arr['better_to'], score: 90 , score_text: "better", diagramma_itog_color: "#D1D80F"},
+            { start: arr['notgood_from'], end: arr['notgood_to'], score: 60, score_text: "notgood", diagramma_itog_color: "#FEE114" },
+            { start: arr['bad_from'], end: arr['bad_to'], score: 30, score_text: "bad", diagramma_itog_color: "#FF8888" },
+            { start: arr['ahtung_from'], end: arr['ahtung_to'], score: 0, score_text: "ahtung", diagramma_itog_color: "#FF0000" }
+    ];
+        let result;
+        let otsenka = "";
+        let diagramma_itog_color = "";
+        for (let i = 0; i < scores.length; i++) {
+		var score_start = (isInverseSettings===true) ? scores[i].end : scores[i].start;
+		var score_end = (isInverseSettings===true) ? scores[i].start : scores[i].end;
+		if ( (summaItog >= score_start && summaItog <= score_end) || (i === (scores.length-1)) ) {
+			result = scores[i].score;
+			//console.log('itog: '+summaItog+', result: '+result);
+			if(i === (scores.length-1) && (summaItog >= score_end || summaItog < 1) ){
+				if(summaItog >= score_end){
+					otsenka = (isInverseSettings===true)?'ahtung':'excelent';
+					diagramma_itog_color = (isInverseSettings===true)?'#FF0000':'#30AD43';
+				}else{
+					otsenka = (isInverseSettings===true)?'excelent':'ahtung';
+					diagramma_itog_color = (isInverseSettings===true)?'#30AD43':'#FF0000';
+				}
+			}else{
+				otsenka = scores[i].score_text; 
+				diagramma_itog_color = scores[i].diagramma_itog_color;
+			}
+            break;
+        }
+    }
+
+        const score = scores.find(item => item.score === result);
+  
+        var score_start2 = score.start;
+	var score_end2 = score.end;
+	if(isInverseSettings === false){
+		var dif_e_s = score_end2 - score_start2;
+		var dif_i_s = summaItog - score_start2;
+		if(dif_i_s > 0){
+			var itog_degree = (summaItog > score_end2) ? 180 : 30/(dif_e_s/dif_i_s) + result;
+		}else{
+			var itog_degree = (summaItog > score_end2) ? 180 : result;
+		}
+		console.log('1: 30/('+dif_e_s+'/'+dif_i_s+') + '+result+' = '+itog_degree);
+	}else{
+		var dif_s_e = score_start2 - score_end2;
+		var dif_i_e = summaItog - score_end2;
+		if(dif_i_e > 0){
+			var itog_degree = (summaItog > score_start2) ? 0 : 30/(dif_s_e/dif_i_e) + result;
+		}else{
+			var itog_degree = (summaItog < 1) ? 180 : result;
+		}
+		console.log('2: 30/('+dif_s_e+'/'+dif_i_e+')+'+result+' = '+itog_degree);
+	}
+	
+    
+        var resultArray = new Map();
+        resultArray.set('otsenka',otsenka);
+        resultArray.set('itog_degree',itog_degree);
+        resultArray.set('diagramma_itog_color',diagramma_itog_color);
+        resultArray.set('izmerenie', arr['izmerenie']);
+        console.log('summaitog: :' + String(summaItog))
+        console.log('градусов:' + String(resultArray.get('itog_degree')));
+        console.log('score.end:' + String(score.end));
+        console.log(resultArray.get('otsenka'))
+        
+        return resultArray;
+}
+
 </script>
 
 

@@ -8,20 +8,20 @@
 
 
 $diagrams_array = selectColumnAll('diagrams_nastroiki', '`diagramma_id`,`diagramma_title`');
-$myArray = getDiagrammNastroikiMassive();
-$arr_data2 = $arr_data3 = [];
-foreach ($myArray as $item) {
-        $arr_data2[] = ['diagramma_id'=>$item['diagramma_id'],'diagramma_title'=>$item['diagramma_title'] ];
+// $myArray = getDiagrammNastroikiMassive();
+// $arr_data2 = $arr_data3 = [];
+// foreach ($myArray as $item) {
+//         $arr_data2[] = ['diagramma_id'=>$item['diagramma_id'],'diagramma_title'=>$item['diagramma_title'] ];
     
-}
-$diagrams_array = array_merge($diagrams_array, $arr_data2);
+// }
+// $diagrams_array = array_merge($diagrams_array, $arr_data2);
 $current_diagrams_array = selectColumnAll('diagrams_nastroiki', '*', '`diagramma_id`=?', [$get_param_1]);
-foreach ($myArray as $item) {
-    if($item['diagramma_id'] == $get_param_1){
-    $arr_data3[] = $item;
-    }
-}
-$current_diagrams_array = array_merge($current_diagrams_array, $arr_data3);
+// foreach ($myArray as $item) {
+//     if($item['diagramma_id'] == $get_param_1){
+//     $arr_data3[] = $item;
+//     }
+// }
+// $current_diagrams_array = array_merge($current_diagrams_array, $arr_data3);
 ?>
 <div class="nav">
 <div class="container_full">

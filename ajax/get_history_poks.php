@@ -31,14 +31,14 @@ if (isset($_POST['get_all_pok']) && $_POST['get_all_pok'] === '12345'){
     $stmt->execute([':diagramma_id' => $diagramma_id, ':company_id' => $company_id]);
     $sql = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
-	$myArray = getPokazateliMassive();
-	foreach ($myArray as $item) {
-		if ($item['company_id'] == $company_id && $item['diagramma_id'] == $diagramma_id) {
-			$arr_data2[] = $item;
+	// $myArray = getPokazateliMassive();
+	// foreach ($myArray as $item) {
+	// 	if ($item['company_id'] == $company_id && $item['diagramma_id'] == $diagramma_id) {
+	// 		$arr_data2[] = $item;
 		   
-		}
-	}
-	$sql = array_merge($sql, $arr_data2);
+	// 	}
+	// }
+	// $sql = array_merge($sql, $arr_data2);
     $row_number = 0;
 	foreach($sql as $val){
         $row_number += 1;

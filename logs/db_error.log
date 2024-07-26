@@ -240,3 +240,10 @@
 2024-07-18 18:40:57 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
 2024-07-21 17:57:52 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
 2024-07-21 17:57:55 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-23 18:32:28 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-23 20:14:50 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-24 10:37:15 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-24 10:37:17 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-24 18:08:56 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-24 22:17:46 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
+2024-07-24 22:25:48 ERROR > Подключение не удалось: SQLSTATE[HY000] [1045] Access denied for user 'dasha'@'localhost' (using password: YES) ; 
